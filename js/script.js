@@ -202,47 +202,36 @@ function mostrarLetra(letra) {
     const texto =
         document.getElementById("texto-letra");
 
+    texto.innerHTML = "";
 
     const partes =
         letra.split(/(\{[^}]*\})/g);
 
-
-    texto.innerHTML = "";
-
-
     partes.forEach(function(parte) {
-
 
         if (
             parte.startsWith("{") &&
             parte.endsWith("}")
         ) {
 
-
             const instrucao =
                 document.createElement("span");
-
 
             instrucao.className =
                 "instrucao-letra";
 
-
             instrucao.textContent =
                 parte;
-
 
             texto.appendChild(
                 instrucao
             );
 
-
         } else {
-
 
             texto.appendChild(
                 document.createTextNode(parte)
             );
-
 
         }
 
