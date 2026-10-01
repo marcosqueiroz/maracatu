@@ -25,7 +25,7 @@ function carregarMusicas() {
 
         .then(function(resposta) {
 
-            return resposta.json();
+            return resposta.text();
 
         })
 
