@@ -20,7 +20,7 @@ let musicaAtual = null;
 function carregarMusicas() {
 
 
-    fetch("musicas.json")
+    fetch("musicas.php")
 
 
         .then(function(resposta) {
@@ -279,7 +279,7 @@ function mostrarAla(ala) {
 
 
         xequere:
-            "Xequêrê",
+            "Xequerê",
 
 
         agogo:
