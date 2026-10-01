@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Maracatu Baque Alagoano</title>
+
+    <link rel="stylesheet" href="css/estilo.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="cabecalho">
+
+        <img src="img/logo-baque.jpg"
+             alt="Maracatu Baque Alagoano"
+             class="logo">
+
+        <p>Área dos Integrantes</p>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+    <!-- =====================================================
+         MENU DE MÚSICAS
+         ===================================================== -->
+
+    <section class="menu-musicas">
+
+        <h2>Músicas</h2>
+
+        <div id="lista-musicas"
+             class="lista-musicas">
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO DA MÚSICA
+         ===================================================== -->
+
+    <section class="conteudo-musica">
+
+
+        <!-- TÍTULO -->
+
+        <div class="titulo-musica">
+
+            <h2 id="nome-musica">
+                Selecione uma música
+            </h2>
+
+            <p id="autor-musica"></p>
+
+        </div>
+
+
+
+        <!-- PLAYER -->
+
+        <div class="player">
+
+            <audio id="audio" controls>
+
+                Seu navegador não suporta áudio.
+
+            </audio>
+
+        </div>
+
+
+
+        <!-- LETRA -->
+
+        <div class="letra">
+
+            <h2>Letra</h2>
+
+            <div id="texto-letra">
+
+                Selecione uma música para visualizar a letra.
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ALAS -->
+
+        <div class="alas">
+
+            <h2>Como tocar</h2>
+
+
+            <div class="botoes-alas">
+
+
+                <button onclick="mostrarAla('xequere')">
+                    Xequêrê
+                </button>
+
+
+                <button onclick="mostrarAla('agogo')">
+                    Agogô
+                </button>
+
+
+                <button onclick="mostrarAla('gongue')">
+                    Gonguê
+                </button>
+
+
+                <button onclick="mostrarAla('caixa')">
+                    Caixa
+                </button>
+
+
+                <button onclick="mostrarAla('alfaia')">
+                    Alfaia
+                </button>
+
+
+                <button onclick="mostrarAla('canto')">
+                    Canto
+                </button>
+
+
+            </div>
+
+
+
+            <div class="explicacao">
+
+                <h3 id="nome-ala">
+                    Selecione uma ala
+                </h3>
+
+
+                <p id="texto-ala">
+
+                    Escolha uma das alas acima.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        Maracatu Baque Alagoano
+    </p>
+
+    <p>
+        Área restrita aos integrantes
+    </p>
+
+</footer>
+
+
+
+<script src="js/script.js"></script>
+
+
+</body>
+
+</html>

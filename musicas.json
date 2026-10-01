@@ -1,0 +1,32 @@
+[
+	{
+	    "nome": "SENHORA DOS PRAZERES",
+	    "autor": "Ronaldo de Andrade",
+	    "ano": 2000,
+	    "audio": "audio/001.mp3",
+	    "letra": "{Caixas, xequerês e alfaias fazem a introdução da música – coco simples}\nENCANTAI NOSSOS CANTORES\nÓ SENHORA DOS PRAZERES\n{Caixas e alfaias - Marcação intervalada}\nRAINHA DE TERRA E MAR\nSENHORA DO AZUL DO CÉU\nIARA DA MUNDAÚ\nSEREIA DAS ENSEADAS\nMÃE D’ÁGUA DE MACEIÓ\nSUA GRAÇA É DOS PRAZERES\n{Todos – Marcação}\nÓ SENHORA DAS AURORAS\nESTRELA DA MADRUGADA\nQUE ILUMINA A CIDADE\nPARA DANÇAR  E TOCAREM\nBOIS E TAMBORES NAS RUAS\nDE LÁ DA PONTA DA TERRA\nTE RENDEMOS HOMENAGENS\n{Todos – Malê com alfaias divididas em repique, meião e marcação}\nÓ IÁ DA PROSPERIDADE\nMÃE DOS HOMENS DE FÉ\nJANGADEIROS, TRAPICHEIROS\nÉS TAMBÉM A FLOR DO AMOR\nQUE ADORNA OS TERREIROS\nENCARNADOS DA PAIXÃO\nNO POÇO E NO JARAGUÁ (2x)\n{Todos – Marcação}\nMINHA MESTRA E CONTRA MESTRA\nPASTORINHA DO PRESÉPIO\nDIANA DO PASTORIL\nCOM MANTO FAIXA E COROA\nE SETE ROSAS NA MÃO\nTANTA GRAÇA, TANTO MIMO\n{Todos – Malê com alfaias divididas em repique, meião e marcação}\nTÁ NO BADALAR DOS SINOS\nNAS TORRES PERTO DE DEUS\nDA CATEDRAL ONDE MORAS\nAO BRILHO DE SOL E LUA\nNOS TEMPORAIS E NO ESTIO\nENCANTAI NOSSOS CANTORES\nÓ SENHORA DOS PRAZERES (2x)",
+	    "alas": {
+		"xequere": "Aqui será apresentada a forma de tocar o xequerê nesta música.",
+		"agogo": "Aqui será apresentada a sequência do agogô.",
+		"gongue": "Aqui será apresentada a sequência do gonguê.",
+		"caixa": "Aqui será apresentada a levada da caixa.",
+		"alfaia": "Aqui será apresentada a levada da alfaia.",
+		"canto": "Aqui serão apresentadas as informações sobre o canto."
+    		}
+	},
+	{
+	    "nome": "Música de exemplo 2",
+	    "autor": "Sicrano",
+	    "ano": 2025,
+	    "audio": "audio/002.mp3",
+	    "letra": "Segunda música de exemplo.\n\nAqui ficará a letra completa\nda música escolhida.",
+	    "alas": {
+		"xequere": "Forma de tocar o xequerê da segunda música.",
+		"agogo": "Forma de tocar o agogô da segunda música.",
+		"gongue": "Forma de tocar o gonguê da segunda música.",
+		"caixa": "Forma de tocar a caixa da segunda música.",
+		"alfaia": "Forma de tocar a alfaia da segunda música.",
+		"canto": "Informações sobre o canto da segunda música."
+	    }
+	}
+]
