@@ -20,7 +20,7 @@ let musicaAtual = null;
 function carregarMusicas() {
 
 
-    fetch("musicas.php")
+    fetch("musicas.json")
 
 
         .then(function(resposta) {
