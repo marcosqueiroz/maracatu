@@ -2,196 +2,287 @@
 <html lang="pt-br">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maracatu Baque Alagoano</title>
-
     <link rel="stylesheet" href="css/estilo.css">
-
 </head>
-
 
 <body>
 
-
+<!-- =========================================================
+     CABEÇALHO
+     ========================================================= -->
 <header>
-
     <div class="cabecalho">
-
-        <img src="img/logo-baque.jpg"
-             alt="Maracatu Baque Alagoano"
-             class="logo">
-
+        <img src="img/logo-baque.jpg" alt="Maracatu Baque Alagoano" class="logo">
         <p>Área dos Integrantes</p>
+    </div>
+</header>
+
+<!-- =========================================================
+     CONTEÚDO PRINCIPAL
+     ========================================================= -->
+<main>
+
+    <!-- =====================================================
+         COLUNA DA ESQUERDA: MENUS
+         ===================================================== -->
+    <aside class="coluna-esquerda">
+
+        <!-- =====================================================
+             MENU 1: TOQUES
+             ===================================================== -->
+        <section class="menu-card menu-toques">
+            <h2>Toques</h2>
+            <div class="lista-botoes">
+                <button class="botao-menu" id="btn-toque-agbes" onclick="mostrarToques('agbes', this)">
+                    Agbês
+                </button>
+                <button class="botao-menu" id="btn-toque-agogos" onclick="mostrarToques('agogos', this)">
+                    Agogôs
+                </button>
+                <button class="botao-menu" id="btn-toque-gongues" onclick="mostrarToques('gongues', this)">
+                    Gonguês
+                </button>
+                <button class="botao-menu" id="btn-toque-caixas" onclick="mostrarToques('caixas', this)">
+                    Caixas
+                </button>
+                <button class="botao-menu" id="btn-toque-alfaias" onclick="mostrarToques('alfaias', this)">
+                    Alfaias
+                </button>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             MENU 2: LETRAS E MÚSICAS (DESLOCADO PARA BAIXO)
+             ===================================================== -->
+        <section class="menu-card menu-musicas">
+            <h2>Letras e Músicas</h2>
+            <div id="lista-musicas" class="lista-botoes lista-musicas">
+                <!-- Preenchido dinamicamente via script.js -->
+            </div>
+        </section>
+
+    </aside>
+
+    <!-- =====================================================
+         COLUNA DA DIREITA: PAINÉIS DE CONTEÚDO
+         ===================================================== -->
+    <div class="conteudo-principal">
+
+        <!-- =====================================================
+             PAINEL: LETRAS E MÚSICAS
+             ===================================================== -->
+        <section id="painel-musica" class="painel-conteudo" style="display: none;">
+
+            <!-- TÍTULO DA MÚSICA -->
+            <div class="titulo-musica">
+                <h2 id="nome-musica">Selecione uma música</h2>
+                <p id="autor-musica"></p>
+            </div>
+
+            <!-- PLAYER DE ÁUDIO -->
+            <div class="player">
+                <audio id="audio" controls>
+                    Seu navegador não suporta áudio.
+                </audio>
+            </div>
+
+            <!-- LETRA DA MÚSICA -->
+            <div class="letra">
+                <h2>Letra</h2>
+                <div id="texto-letra">
+                    Selecione uma música para visualizar a letra.
+                </div>
+            </div>
+
+            <!-- ALAS (COMO TOCAR) -->
+            <div class="alas">
+                <h2>Como tocar</h2>
+
+                <div class="botoes-alas">
+                    <button onclick="mostrarAla('xequere')">Xequerê</button>
+                    <button onclick="mostrarAla('agogo')">Agogô</button>
+                    <button onclick="mostrarAla('gongue')">Gonguê</button>
+                    <button onclick="mostrarAla('caixa')">Caixa</button>
+                    <button onclick="mostrarAla('alfaia')">Alfaia</button>
+                    <button onclick="mostrarAla('canto')">Canto</button>
+                </div>
+
+                <div class="explicacao">
+                    <h3 id="nome-ala">Selecione uma ala</h3>
+                    <p id="texto-ala">Escolha uma das alas acima.</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PAINEL: TOQUES (CAIXAS, AGBÊS, AGOGÔS, GONGUÊS, ALFAIAS)
+             ===================================================== -->
+        <section id="painel-toques" class="painel-conteudo">
+
+            <!-- =================================================
+                 INSTRUMENTO: CAIXAS
+                 ================================================= -->
+            <div id="toques-caixas" class="secao-instrumento">
+                <div class="cabecalho-secao-toque">
+                    <h2>Toques das Caixas</h2>
+                    <p>Sinais de chamada e vídeos explicativos para a ala das Caixas.</p>
+                </div>
+
+                <!-- =========================================================
+                     INÍCIO DO BLOCO DO TOQUE (COPIE ESTE BLOCO PARA CRIAR OUTRO TOQUE DE CAIXA)
+                     ========================================================= -->
+                <article class="bloco-toque">
+
+                    <!-- NOME DO TOQUE -->
+                    <header class="topo-bloco-toque">
+                        <h3 class="nome-toque">3 - Três</h3>
+                    </header>
+
+                    <p class="descricao-toque">
+                        Posições e sinais de chamada para a levada da Caixa no baque, seguidos do vídeo de demonstração.
+                    </p>
+
+                    <!-- SINAIS DO TOQUE (UMA OU DUAS FOTOS LADO A LADO) -->
+                    <div class="area-fotos-sinal">
+                        <h4 class="subtitulo-bloco">Sinal do Toque</h4>
+                        <div class="grade-fotos-sinal">
+                            <!-- Foto 1 -->
+                            <figure class="card-foto-sinal">
+                                <img src="img/sinal-3.png" alt="Sinal do toque de caixa - Foto 1" class="img-sinal">
+                                <figcaption>Sinal 3 (Preparação / Chamada)</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+
+                    <!-- PLAYER DE VÍDEO DO YOUTUBE -->
+                    <div class="area-video-toque">
+                        <h4 class="subtitulo-bloco">Vídeo Demonstrativo</h4>
+                        <div class="video-container">
+                            <iframe
+                                width="315"
+                                height="560"
+                                src="https://youtube.com/embed/VXMxz7R68Og"
+                                title="Toque de Caixa Três - YouTube"
+                                frameborder="0"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+
+                </article>
+
+                <article class="bloco-toque">
+                    <header class="topo-bloco-toque">
+                        <h3 class="nome-toque">Nome do Novo Toque</h3>
+                    </header>
+                    <!-- FOTOS (1 OU 2 LADO A LADO) -->
+                    <div class="area-fotos-sinal">
+                        <h4 class="subtitulo-bloco">Sinal do Toque</h4>
+                        <div class="grade-fotos-sinal">
+                            <figure class="card-foto-sinal">
+                                <img src="img/seu-sinal-1.jpg" alt="Sinal 1" class="img-sinal">
+                                <figcaption>Sinal 1 (Descrição)</figcaption>
+                            </figure>
+                            <!-- Se houver uma 2ª foto: -->
+                            <figure class="card-foto-sinal">
+                                <img src="img/seu-sinal-2.jpg" alt="Sinal 2" class="img-sinal">
+                                <figcaption>Sinal 2 (Descrição)</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- VÍDEO DO YOUTUBE -->
+                    <div class="area-video-toque">
+                        <h4 class="subtitulo-bloco">Vídeo Demonstrativo</h4>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/CODIGO_DO_VIDEO" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </article>
+                <!-- =========================================================
+                     FIM DO BLOCO DO TOQUE (PARA ADICIONAR OUTRO TOQUE DE CAIXA,
+                     COPIE O BLOCO ACIMA E COLE LOGO ABAIXO)
+                     ========================================================= -->
+
+            </div>
+
+
+            <!-- =================================================
+                 INSTRUMENTO: AGBÊS
+                 ================================================= -->
+            <div id="toques-agbes" class="secao-instrumento" style="display: none;">
+                <div class="cabecalho-secao-toque">
+                    <h2>Toques de Agbês</h2>
+                    <p>Sinais e vídeos explicativos para Agbês.</p>
+                </div>
+                <div class="aviso-em-breve">
+                    <p>Área de Agbês preparada. Copie a estrutura do bloco de toque da Caixa para inserir os toques aqui.</p>
+                </div>
+            </div>
+
+
+            <!-- =================================================
+                 INSTRUMENTO: AGOGÔS
+                 ================================================= -->
+            <div id="toques-agogos" class="secao-instrumento" style="display: none;">
+                <div class="cabecalho-secao-toque">
+                    <h2>Toques de Agogôs</h2>
+                    <p>Sinais e vídeos explicativos para Agogôs.</p>
+                </div>
+                <div class="aviso-em-breve">
+                    <p>Área de Agogôs preparada. Copie a estrutura do bloco de toque da Caixa para inserir os toques aqui.</p>
+                </div>
+            </div>
+
+
+            <!-- =================================================
+                 INSTRUMENTO: GONGUÊS
+                 ================================================= -->
+            <div id="toques-gongues" class="secao-instrumento" style="display: none;">
+                <div class="cabecalho-secao-toque">
+                    <h2>Toques de Gonguês</h2>
+                    <p>Sinais e vídeos explicativos para Gonguês.</p>
+                </div>
+                <div class="aviso-em-breve">
+                    <p>Área de Gonguês preparada. Copie a estrutura do bloco de toque da Caixa para inserir os toques aqui.</p>
+                </div>
+            </div>
+
+
+            <!-- =================================================
+                 INSTRUMENTO: ALFAIAS
+                 ================================================= -->
+            <div id="toques-alfaias" class="secao-instrumento" style="display: none;">
+                <div class="cabecalho-secao-toque">
+                    <h2>Toques de Alfaias</h2>
+                    <p>Sinais e vídeos explicativos para Alfaias.</p>
+                </div>
+                <div class="aviso-em-breve">
+                    <p>Área de Alfaias preparada. Copie a estrutura do bloco de toque da Caixa para inserir os toques aqui.</p>
+                </div>
+            </div>
+
+        </section>
 
     </div>
 
-</header>
-
-
-
-<main>
-
-
-    <!-- =====================================================
-         MENU DE MÚSICAS
-         ===================================================== -->
-
-    <section class="menu-musicas">
-
-        <h2>Músicas</h2>
-
-        <div id="lista-musicas"
-             class="lista-musicas">
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         CONTEÚDO DA MÚSICA
-         ===================================================== -->
-
-    <section class="conteudo-musica">
-
-
-        <!-- TÍTULO -->
-
-        <div class="titulo-musica">
-
-            <h2 id="nome-musica">
-                Selecione uma música
-            </h2>
-
-            <p id="autor-musica"></p>
-
-        </div>
-
-
-
-        <!-- PLAYER -->
-
-        <div class="player">
-
-            <audio id="audio" controls>
-
-                Seu navegador não suporta áudio.
-
-            </audio>
-
-        </div>
-
-
-
-        <!-- LETRA -->
-
-        <div class="letra">
-
-            <h2>Letra</h2>
-
-            <div id="texto-letra">
-
-                Selecione uma música para visualizar a letra.
-
-            </div>
-
-        </div>
-
-
-
-        <!-- ALAS -->
-
-        <div class="alas">
-
-            <h2>Como tocar</h2>
-
-
-            <div class="botoes-alas">
-
-
-                <button onclick="mostrarAla('xequere')">
-                    Xequerê
-                </button>
-
-
-                <button onclick="mostrarAla('agogo')">
-                    Agogô
-                </button>
-
-
-                <button onclick="mostrarAla('gongue')">
-                    Gonguê
-                </button>
-
-
-                <button onclick="mostrarAla('caixa')">
-                    Caixa
-                </button>
-
-
-                <button onclick="mostrarAla('alfaia')">
-                    Alfaia
-                </button>
-
-
-                <button onclick="mostrarAla('canto')">
-                    Canto
-                </button>
-
-
-            </div>
-
-
-
-            <div class="explicacao">
-
-                <h3 id="nome-ala">
-                    Selecione uma ala
-                </h3>
-
-
-                <p id="texto-ala">
-
-                    Escolha uma das alas acima.
-
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
 </main>
 
-
-
+<!-- =========================================================
+     RODAPÉ
+     ========================================================= -->
 <footer>
-
-    <p>
-        Maracatu Baque Alagoano
-    </p>
-
-    <p>
-        Área restrita aos integrantes
-    </p>
-
+    <p>Maracatu Baque Alagoano</p>
+    <p>Área restrita aos integrantes</p>
 </footer>
-
-
 
 <script src="js/script.js"></script>
 
-
 </body>
-
 </html>
